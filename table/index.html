@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border: 1px solid rgb(200 200 200);
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+            margin-right: 0px!important;
+            width: 100% !important;
+        }
+        tr{
+            border: 1px solid rgb(200 200 200);
+        }
+        th{
+            border: 1px solid rgb(200 200 200);
+            padding:0 5px;
+            height: 34px!important;
+        }
+        td{
+            border: 1px solid rgb(200 200 200);
+            color: #277dbe;
+            padding:0 5px;
+            height: 34px!important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="container" style="margin:auto;border: 1px solid rgb(200 200 200);max-width: 900px; overflow-y:none;overflow-x:scroll;"></div>
+    </div>
+    
+
+    <script>
+        var tab=document.createElement("table")
+        var tr=document.createElement("tr")
+        for(var i=1;i<10;i++){
+            var th=document.createElement("th")
+            th.innerText="Header"+i
+            tr.appendChild(th)
+        }
+        var thead=tab.appendChild(document.createElement("thead"))
+        thead.appendChild(tr)
+        tab.appendChild(thead)
+
+        for(j=1;j<15;j++){
+            var tr=document.createElement("tr")
+            for(var i=1;i<10;i++){
+                var td=document.createElement("td")
+                td.innerText="row"+j+",cell"+i
+                tr.appendChild(td)
+            }
+            tab.appendChild(tr)
+        }
+        
+        document.getElementById("container").appendChild(tab)
+    </script>
+</body>
+</html>
