@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *, ::after, ::before{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .header{
+            overflow: hidden;
+            height: 60px;
+            box-shadow: 0 1px 1px rgb(230 230 230);
+            /* background-color: aliceblue; */
+        }
+        .header-page{
+            height: 100%;
+            transition:0.5s ease;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header:hover .header-page{
+            transform:translate(0,-100%);
+        }
+
+        .content{
+            display: flex;
+            justify-content: start;
+
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card-item{
+            min-width: 175px;
+            flex-basis: 175px;
+            flex-grow: 1;
+
+            border-radius: 5px;
+            /* border: 1px solid lightgray; */
+
+            /* padding: 5px; */
+            margin: 5px;
+            margin-top: 10px;
+            background-color: white;
+
+            transition: 0.3s ease;
+        }
+        .empty-item{
+            height: 0px;
+            min-width: 175px;
+            flex-basis: 175px;
+            flex-grow: 1;
+
+            padding:0 5px;
+            margin:0 5px;
+        }
+ 
+        .card-item:hover{
+            box-shadow: 0 0 20px rgb(230 230 230);
+            transform: translate(0,-5px);
+        }
+        a.title,a.title:visited{
+            font-size: 1.2em;
+            text-decoration: none;
+            color: black;
+            transition: 0.2s;
+        }
+        a.title:hover{
+            color: red;
+        }
+        .info{
+            color: gray;
+        }
+
+        #input-test{
+            width: 25%;
+            height: 36px;
+
+            font-size: 20px;
+            border:1px solid antiquewhite;
+            outline: none;
+            background-color: antiquewhite;
+
+            border-radius: 18px;
+            padding-left: 30px;
+            transition: 0.4s ease;
+        }
+        #input-test:hover{
+            width: 80%;
+            border-color: orange;
+        }
+        .svg-search{
+            pointer-events: none;
+            height: 24px;
+            width: 24px;
+
+            position: relative;
+            right: -30px;
+        }
+
+        #test{
+            stroke: orange;
+            stroke-width: 50;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+
+        }
+        .card-img-wrap{
+            border-radius: inherit;
+            width: 100%;
+            padding-top: 60%;
+
+            position: relative;
+        }
+        .card-img{
+            border-radius: inherit;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-page">Click me!!!</div>
+        <div class="header-page">
+            <svg class="svg-search" viewBox="0 0 600 600"><path id="test" d="M480,210 L300,550 L120,210 A180,180 0 0 1 480,210 L120,210"></path></svg>
+        
+            <input id="input-test" type="text">
+        </div>
+    </div>
+    <div class="content">
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://www.bizhishe.com/d/file/2021-01-28/b6d8189c82ffa2c89bab39f574650b0c.jpg" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP.wuJTZStFF9mF3v1VQofhKwHaEK" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP.WxEDZ-8sNlkZV_vDMY0KrAHaEK" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP._L-Usl02AGnz8B3y3saNqwHaEK" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+  
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP.Uwxz-SNXJC_6Wq5VGfQukQHaEK" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP.wtGt9CVYPpKy09gxjPVhBQHaEK" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP.LzE01-Ekqx5Yk1vJKa-ZJAHaEL" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="card-item">
+            <div class="card-img-wrap">
+                <img class="card-img" src="https://th.bing.com/th/id/OIP.gV8Y3RKZj6gnlXcu92PaMAHaD0" alt="">
+            </div>
+            <a href="https://www.bing.com/?scope=images&nr=1&FORM=NOFORM" target="_blank" class="title">this is title</a>
+            <div class="info">this is info</div>
+        </div>
+        <div class="empty-item"></div>
+        <div class="empty-item"></div>
+        <div class="empty-item"></div>
+        
+    </div>
+    <div style="text-align: center;font-size: 16px;color: gray;">- - - 图片来自bing图片 - - -</div>
+    <!-- <script>
+        alert(document.body.clientWidth)
+    </script> -->
+</body>
+</html>
